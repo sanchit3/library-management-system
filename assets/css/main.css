@@ -1,0 +1,37 @@
+.books-bg {
+	background: url('/assets/images/blur_books_lib.jpg');
+	background-size: cover;
+}
+
+.fd-bg {
+    background: #423e52d6;
+}
+
+.mt-20 {
+    margin-top: 20%;
+}
+
+.cur-pointer {
+    cursor: pointer;
+}
+
+a.list-group-item-action.active > span.fa {
+    color: white !important;
+}
+
+.hide {
+    display: none;
+}
+
+table tbody {
+    overflow: scroll;
+}
+
+.table-custom-input {
+    border: none;
+}
+
+.table-custom-input:disabled {
+    text-align: left;
+    background: none;
+}

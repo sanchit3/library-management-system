@@ -1,0 +1,43 @@
+<style>
+    .custom-border > a {
+        border-left: none;
+        border-right: none;
+        font-size: large;
+    }
+
+     .custom-border > a > span {
+         margin-right: 5px;
+     }
+</style>
+<nav class="border-right vh-100 text-center" style="width: 250px">
+    <div>
+        <h3 class="p-3">Menu</h3>
+    </div>
+
+    <div class="list-group custom-border">
+        <a href="/dashboard/issuebook" class="list-group-item list-group-item-action">
+            <span class="fa fa-book-open text-success"></span>
+            Issue Book
+        </a>
+        <a href="/dashboard/returnbook" class="list-group-item list-group-item-action">
+            <span class="fa fa-undo-alt text-info"></span>
+            Return Book
+        </a>
+        <a href="/dashboard/searchbook" class="list-group-item list-group-item-action">
+            <span class="fa fa-search text-warning"></span>
+            Search Book
+        </a>
+        <a href="/dashboard/studentmenu" class="list-group-item list-group-item-action">
+            <span class="fa fa-user text-dark"></span>
+            Student Menu
+        </a>
+        <a href="/dashboard/bookmenu" class="list-group-item list-group-item-action">
+            <span class="fa fa-book text-danger"></span>
+            Book Menu
+        </a>
+        <a href="/dashboard/finechecker" class="list-group-item list-group-item-action">
+            <span class="fa fa-info-circle text-info"></span>
+            Fine Checker
+        </a>
+    </div>
+</nav>

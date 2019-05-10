@@ -1,0 +1,68 @@
+{{> 'back_home' }}
+
+<article class="vh-100 books-bg d-flex flex-column justify-content-center align-items-center">
+    {{#if alert}}
+    <div class="alert text-center {{alert.class}} alert-dismissible fade show">
+        {{{ alert.msg }}}
+        <button class="btn close" data-dismiss="alert"><span class="fa fa-times"></span></button>
+    </div>
+    {{/if}}
+    <section class="container w-25">
+        <section class="card shadow fd-bg">
+            <div class="card-body">
+                <form action="/inst/reg" method="POST" class="text-white" id="regForm">
+                    <legend class="text-center mb-3 font-weight-bold">
+                        <span class="fa fa-university"></span> Register Your Institute With LIMS
+                    </legend>
+                    <hr class="w-50 bg-white">
+                    <div class="form-group">
+                        <label for="inst_name">Institute Name</label>
+                        <input type="text" class="form-control" name="inst_name" id="inst_name">
+                        <small>Must be in between 4-120</small>
+                        <div class="error-msg"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inst_type">Institute Type</label>
+                        <select class="form-control" name="inst_type" id="inst_type">
+                            <option value="school">School</option>
+                            <option value="college">College</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-msg"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inst_email">Institute Email</label>
+                        <input type="text" class="form-control" name="inst_email" id="inst_email">
+                        <div class="error-msg"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inst_pwd">Password</label>
+                        <input type="password" class="form-control" name="inst_pwd" id="inst_pwd">
+                        <small>Must contain atleast one symbol, letter and number and in between 4-25</small>
+                        <div class="error-msg"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="conf_pwd">Confirm Password</label>
+                        <input type="password" class="form-control" id="conf_pwd" name="conf_pwd">
+                        <div class="error-msg"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary btn-block">
+                    </div>
+                </form>
+                <hr class="bg-white">
+                <p class="lead text-white text-center">
+                    I already have an account.
+                    <a href="/login" class="btn btn-success">Login Now</a>
+                </p>
+            </div>
+        </section>
+    </section>
+</article>
+
+{{!-- script to display error messages from server side --}}
+{{#if_cond formStatus.isValid '==' false}}
+{{#auth_error_script formStatus.invalidFields values}}
+{{/auth_error_script}}
+{{/if_cond}}
+<script src="/assets/js/validation/reg_valid.js" type="module" defer></script>

@@ -1,0 +1,52 @@
+<article class="p-4 card my-5 shadow">
+
+    <div class="alert alert-dismissible fade hide" id="alertMsg">
+        <div></div>
+        <button class="btn close"><span class="fa fa-times"></span></button>
+    </div>
+
+    <div class="row">
+        <div class="form-group pr-2 col-md-6 align-self-center">
+            <h3>Book Name or Id</h3>
+            <input type="text" class="form-control search-input" id="srchBook">
+
+            <ul class="list-group" id="displayBooks">
+            </ul>
+
+            <div class="text-left p-3" id="bookMsg">
+            </div>
+
+        </div>
+
+        <div class="col-md-6 pl-3 border-left">
+            <h3>Book Details : </h3>
+            <hr>
+            <div id="bookDetailBox"></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="form-group pr-2 col-md-6 align-self-center">
+            <h3>Student Id</h3>
+            <input type="text" class="form-control search-input" id="srchStudent">
+
+            <div class="text-left p-3" id="studentMsg">
+            </div>
+
+        </div>
+
+        <div class="col-md-6 pl-3 border-left">
+            <h3>Student Details : </h3>
+            <hr>
+            <div id="studentDetailBox"></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <button class="btn btn-success w-25 m-auto" id="issueBtn" disabled><span class="fa fa-check-circle"></span> Issue
+        Book</button>
+</article>
+<script src="/assets/js/issuebook.js" type="module" defer></script>

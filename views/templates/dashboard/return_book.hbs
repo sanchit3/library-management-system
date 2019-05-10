@@ -1,0 +1,47 @@
+<article class="p-4 card my-5 shadow">
+
+    <div class="alert alert-dismissible fade hide" id="alertMsg">
+        <div></div>
+        <button class="btn close"><span class="fa fa-times"></span></button>
+    </div>
+
+    <div class="row">
+        <div class="form-group pr-2 col-md-6 align-self-center">
+            <h3>Student Id</h3>
+            <input type="text" class="form-control search-input" id="searchInput">
+
+            <div class="text-left p-3">
+            </div>
+
+        </div>
+
+        <div class="col-md-6 pl-3 border-left">
+            <h3>Student Details : </h3>
+            <hr>
+            <div id="detailBox">
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <section>
+        <table class="table table-responsive-md table-hover table-bordered" id="recTable">
+            <thead>
+                <tr>
+                    <td>Issue Id</td>
+                    <td>Book Id</td>
+                    <td>Book Name</td>
+                    <td>Issue Date</td>
+                    <td>Return Date</td>
+                    <td>Fine</td>
+                    <td>Return Book</td>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+            </tbody>
+        </table>
+    </section>
+</article>
+<script src="/assets/js/returnbook.js" type="module" defer></script>

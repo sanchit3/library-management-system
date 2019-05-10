@@ -1,0 +1,53 @@
+<article class="card shadow my-5">
+    <section class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="font-weight-bold">Check Fine</label>
+                    <input type="text" class="form-control search-input" id="searchInput">
+                    <div class="p-2">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Check By</label>
+                    <select class="custom-select" id="searchType">
+                        <option value="sid" selected>Student Id</option>
+                        <option value="bid">Book Id</option>
+                        <option value="branch">Branch Name</option>
+                        <option value="book_name">Book Name</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary search-btn" id="searchBy">Search</button>
+                <button class="btn btn-outline-warning search-btn" id="searchAll">Show All</button>
+                <small>(List all books in institute)</small>
+            </div>
+
+            <div class="col-md-8 pl-3 border-left">
+                <h3>Fine Details : </h3>
+                <hr>
+                <div id="detailBox">
+
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <table class="table table-responsive-md table-bordered table-hover" id="recTable">
+            <thead>
+                <tr>
+                    <td>Student Id</td>
+                    <td>Issue Id</td>
+                    <td>Book Name</td>
+                    <td>Branch</td>
+                    <td>Issue Date</td>
+                    <td>Return Date</td>
+                    <td>Fine</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+</article>
+<script src="/assets/js/finechecker.js" type="module" defer></script>

@@ -1,0 +1,94 @@
+<style>
+    .modal-dialog {
+        width: 100vw;
+        position: absolute;
+        left: 0px;
+    }
+
+    .modal-content {
+        width: 100vw;
+    }
+
+    .modal-body tbody {
+        overflow: scroll;
+    }
+</style>
+
+<article class="card shadow my-5">
+    <section class="card-body">
+        <div class="w-25">
+            <div class="form-group">
+                <label class="font-weight-bold">Book Search</label>
+                <input type="text" class="form-control search-input" id="searchInput">
+                <div class="p-2">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Search By</label>
+                <select class="custom-select" id="searchType">
+                    <option value="uid">Book Id</option>
+                    <option value="name">Book Name</option>
+                    <option value="author">Author Name</option>
+                    <option value="branch">Branch</option>
+                </select>
+            </div>
+
+            <button class="btn btn-primary search-btn" id="searchBy">Search</button>
+            <button class="btn btn-outline-warning search-btn" id="searchAll">Show All</button>
+            <small>(List all books in library)</small>
+        </div>
+
+        <hr>
+
+        <table class="table table-responsive-md table-bordered table-hover" id="listTable">
+            <thead>
+                <tr>
+                    <td>Book Id</td>
+                    <td>Book Name</td>
+                    <td>Auhtor</td>
+                    <td>Branch</td>
+                    <td>Quantity</td>
+                    <td>Stock</td>
+                    <td>Check Issue Records</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+</article>
+{{!-- Modal to display book issue record --}}
+<div class="modal fade" id="recordModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Issue History</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <div class="text-left book-info">
+
+                </div>
+                <hr>
+                <table class="table table-responsive-md table-bordered table-hover" id="recTable">
+                    <thead>
+                        <tr>
+                            <td>Student Id</td>
+                            <td>Issue Id</td>
+                            <td>Book Name</td>
+                            <td>Issue Date</td>
+                            <td>Return Date</td>
+                            <td>Fine</td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src='/assets/js/searchbook.js' defer type="module"></script>

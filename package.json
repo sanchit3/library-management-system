@@ -1,0 +1,21 @@
+{
+  "name": "lims_web_app",
+  "version": "1.0.0",
+  "description": "A library management system as web based platform ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ajit",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "connect-redis": "^3.4.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "mongodb": "^3.1.13",
+    "morgan": "^1.9.1"
+  }
+}

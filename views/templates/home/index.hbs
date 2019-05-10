@@ -1,0 +1,52 @@
+<style>
+    .vrt-tick {
+        width: 2px;
+        height: 60px;
+        background: white;
+        margin: 5px;
+        transform: rotate(10deg);
+    }
+</style>
+
+<article class="vh-100 books-bg d-flex">
+    <section class="container align-self-center">
+        <div class="card shadow p-4 fd-bg">
+
+            <div class="card-body row align-items-center">
+
+                <div class="col-md-6 text-center border-right">
+                    <h1 class="display-4 font-weight-bold text-white">
+                        <span class="fa fa-book text-success"></span>
+                        LI-M-S
+                    </h1>
+                    <p class="lead text-white-50 font-weight-bold">Library Management System</p>
+                    <p class="lead text-white">A Library Management system for schools and colleges to manage their
+                        library records.Platform includes various features such as to issue/return book, fine fees
+                        management and rich editing for library books.</p>
+                    <hr class="bg-white my-4">
+                    <h3 class="text-white">Students ! Check your book issue history.</h3>
+                    <a href="/search" class="btn btn-warning my-3">Check Records</a>
+                </div>
+                {{!-- Lims info end --}}
+
+                <div class="col-md-6 text-center text-white">
+                    <span class="fa fa-university fa-5x border-bottom"></span>
+                    <h1 class="lead text-white my-4">Register or Login your Institute to access <span
+                            class="font-weight-bold">LIMS</span></h1>
+                    <hr class="bg-white my-4">
+
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a href="/reg" class="btn btn-primary">Register</a>
+                        <span class="vrt-tick"></span>
+                        <a href="/login" class="btn btn-success">Login</a>
+                    </div>
+                </div>
+                {{!-- login/reg end --}}
+            </div>
+            {{!-- card body end --}}
+        </div>
+        {{!-- card end --}}
+    </section>
+    {{!-- contianer end --}}
+</article>
+{{!-- main wrapper end --}}

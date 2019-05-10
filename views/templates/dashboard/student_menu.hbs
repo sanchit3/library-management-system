@@ -1,0 +1,85 @@
+<article class="card shadow my-5">
+    <section class="card-body">
+        <div class="alert alert-dismissible fade hide" id="alertMsg">
+            <div></div>
+            <button class="btn close"><span class="fa fa-times"></span></button>
+        </div>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link show active" data-toggle="tab" href="#addEntity">Add Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link show" data-toggle="tab" href="#studentModify">Modify/Remove Student</a>
+            </li>
+        </ul>
+        <hr>
+        <div class="tab-content">
+            <div class="tab-pane fade show active w-25" id="addEntity">
+                <form action="#">
+                    <div class="form-group">
+                        <label for="name">Student Name</label>
+                        <input type="text" name="name" id="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="srollno">Student Id(Roll Number)</label>
+                        <input type="text" name="rollno" id="rollno" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="sbranch">Branch</label>
+                        <input type="text" name="branch" id="branch" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="semail">Student Email</label>
+                        <input type="text" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Add
+                            Student</button>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade show" id="studentModify">
+                <div class="w-25">
+                    <div class="form-group">
+                        <label class="font-weight-bold">Student Search</label>
+                        <input type="text" class="form-control search-input" id="searchInput">
+                        <div class="p-2">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Search By</label>
+                        <select class="custom-select" id="searchType">
+                            <option value="rollno">Student roll no</option>
+                            <option value="name">Student Name</option>
+                            <option value="branch">Branch</option>
+                            <option value="email">Email</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary search-btn" id="searchBy">Search</button>
+                    <button class="btn btn-outline-warning search-btn" id="searchAll">Show All</button>
+                    <small>(List all students in institute)</small>
+                </div>
+
+                <hr>
+
+                <table class="table table-responsive-md table-bordered table-hover" id="listTable">
+                    <thead>
+                        <tr>
+                            <td>Student Library Id</td>
+                            <td>Student Name</td>
+                            <td>Student Email</td>
+                            <td>Branch</td>
+                            <td>Edit Student</td>
+                            <td>Remove Student</td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</article>
+<script src="/assets/js/menu/menu.js" type="module" defer></script>
